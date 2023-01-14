@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Starbucks WebSite</title>
+  </head>
+  <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+          <a href="#" class="nav-logo">
+            <img src="assets/img/starbucks.png" alt="">
+          </a>
+
+          <div class="nav-menu">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#index" class="nav-link">STARBUCKS REWARDS</a>
+                <a href="#" class="nav-link">MENU</a>
+                <i class="ri-map-pin-fill map-icon"></i>
+                <a href="#" class="nav-link">Our stores</a>
+                <a href="#" class="nav-button">Inbox</a>
+                <a href="#" class="nav-button">Login</a>
+                <a href="#" class="nav-button1">Join Now</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+       <!--==================== HOME ====================-->
+        <section class="home" id="home">
+          <div class="circle"></div>
+          <div class="home-container container">
+            <div class="home-data">
+                <h1 class="home-title">
+                  It's not just a coffee<br>
+                  This <span>Starbucks</span></h1>
+                <p class="home-description">Not all coffee is created equal. You already know that the two most recognized species of commercially grown coffee trees are arabica and robusta. They greatly differ from each other, and here’s why we only purchase arabica coffee</p>
+                <a href="#" class="home-button">for more info</a>
+            </div>
+            <img src="assets/img/green-drink.png" class="home-img" alt="">
+          </div>
+          <ul class="thumb">
+            <li><img src="assets/img/thumb1.png" onClick="imgSlider('assets/img/green-drink.png'); changeCircleColor('#017143')"></li>
+            <li><img src="assets/img/thumb2.png" onClick="imgSlider('assets/img/pink-drink.png'); changeCircleColor('#eb7595')"></li>
+            <li><img src="assets/img/thumb3.png" onClick="imgSlider('assets/img/darkpink-drink.png'); changeCircleColor('#d752b1')" class="thumb3"></li>
+          </ul>
+          <ul class="icons">
+            <li><i class="ri-facebook-circle-line"></i></li>
+            <li><i class="ri-twitter-line"></i></li>
+            <li><i class="ri-instagram-line"></i></li>
+          </ul>
+        </section>
+      </main>
+
+      <!--=============== GSAP ===============-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+  </body>
+</html>

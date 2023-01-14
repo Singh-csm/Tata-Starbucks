@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(277, 100%, 33%);
+  --first-color-alt: hsl(277, 100%, 20%);
+  --title-color: hsl(326, 100%, 45%);
+  --text-color: #FFF;
+  --body-color: hsl(284, 100%, 10%);
+
+  /*========== Font and typography ==========*/
+  --body-font: Arial, sans-serif;
+  --title-font: 'Quicksand', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --normal-font-size: .938rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .5rem;
+  height: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 5rem;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: .5rem 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: #FFF;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  margin: 0 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 2rem 10rem;
+}
+
+.nav {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-logo {
+  position: relative;
+  width: 12%;
+}
+
+.nav-link {
+  font-family: var(--title-font);
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: hsl(11, 1%, 35%);
+}
+
+.nav-button {
+  color: #000;
+  border: 1px solid #000;
+  padding: .3rem .8rem;
+  border-radius: 2rem;
+}
+
+.nav-button:hover {
+  background-color: hsl(11, 0%, 90%);
+}
+
+.nav-button1 {
+  color: #FFF;
+  background-color: #000;
+  border: 1px solid #000;
+  padding: .3rem .8rem;
+  border-radius: 2rem;
+}
+
+.nav-button1:hover {
+  background-color: hsl(11, 1%, 35%);
+}
+
+.map-icon {
+  position: relative;
+  color: #000;
+  left: 27px;
+}
+
+/*=============== HOME ===============*/
+.home,
+.home-container {
+  position: relative;
+}
+
+.home-container {
+  height: 100vh;
+  padding-top: 11rem;
+  display: flex;
+}
+
+.home-title {
+  color: #000;
+  font-size: 4rem;
+  padding: 0 2rem;
+  font-weight: 500;
+}
+
+.home-title span {
+  color: #017143;
+  font-weight: 900;
+}
+
+.home-description {
+  color: #333;
+  padding: 2rem;
+  width: 85%;
+  line-height: 1.3rem;
+}
+
+.home-button {
+  display: inline-block;
+  color: #FFF;
+  background-color: #017143;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+}
+
+.home-button:hover {
+  background-color: hsl(155, 40%, 40%);
+}
+
+.home-img {
+  position: relative;
+  top: -8%;
+  animation: drink 4s ease-in-out infinite;
+}
+
+.thumb {
+  display: flex;
+  position: absolute;
+  left: 42%;
+  bottom: 20px;
+  transform: translate(-50%);
+  animation: drinks 6s ease infinite;
+}
+
+.thumb li {
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 60px;
+}
+
+.thumb3 {
+  transform: translate(0, -5px) rotate(-12deg);
+}
+
+.icons {
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  right: -50%;
+}
+
+.ri-facebook-circle-line:hover,
+.ri-twitter-line:hover,
+.ri-instagram-line:hover {
+  color: hsl(11, 0%, 90%);
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #017143;
+  clip-path: circle(600px at right 800px);
+  z-index: -1;
+}
+
+/* Animation drink */
+@keyframes drink {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animation drinks */
+@keyframes drinks {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
